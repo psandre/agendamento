@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Lavagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agende sua Lavagem</h1>
+
+    <form id="agendamentoForm">
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+      
+      <label>Contato (WhatsApp ou celular):</label>
+      <input type="tel" name="contato" placeholder="(27) 99999-9999" required>
+
+      <label>Data:</label>
+      <input type="date" name="data" required>
+
+      <label>Horário:</label>
+      <input type="time" name="hora" required min="08:00" max="18:00">
+
+      <label>Tipo de Serviço:</label>
+      <select name="servico" required>
+        <option value="">Selecione</option>
+        <option value="simples">Lavagem Externa</option>
+        <option value="completa">Lavagem e Aspiração</option>
+      </select>
+
+      <button type="submit">Agendar</button>
+    </form>
+
+    <div id="mensagem" class="hidden">
+      ✅ Seu agendamento foi registrado!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
